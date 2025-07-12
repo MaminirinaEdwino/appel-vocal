@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appel Vocal WebRTC</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Appel Vocal Simple</h1>
+
+        <div class="controls">
+            <input type="text" id="usernameInput" placeholder="Votre nom d'utilisateur" value="User1">
+            <button id="connectButton">Connecter</button>
+            <p id="status">Statut: Déconnecté</p>
+        </div>
+
+        <div class="call-controls">
+            <input type="text" id="remoteUserInput" placeholder="Appeler utilisateur...">
+            <button id="callButton" disabled>Appeler</button>
+            <button id="hangupButton" disabled>Raccrocher</button>
+        </div>
+
+        <div class="logs">
+            <h2>Journal</h2>
+            <div id="log"></div>
+        </div>
+
+        <audio id="remoteAudio" autoplay></audio>
+        </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
