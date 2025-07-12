@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         statusDiv.textContent = 'Statut: Connexion...';
         log(`Tentative de connexion au serveur WebSocket en tant que ${username}...`);
-        ws = new WebSocket(`ws://${window.location.hostname}:8000/ws/${username}`);
+        const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+        ws = new WebSocket(`${protocol}//${window.location.hostname}/ws/${username}`);
         console.log(ws)
         ws.onopen = async () => {
             statusDiv.textContent = 'Statut: Connecté';
